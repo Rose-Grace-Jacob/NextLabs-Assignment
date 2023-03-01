@@ -18,11 +18,20 @@ print(numbers)
 ## Problem Set 2 - A functioning web app with API :
 1. [Frontend Repository Link](https://github.com/Rose-Grace-Jacob/NextLabs-Frontend.git) <br>
 2. [Backend Repository Link](https://github.com/Rose-Grace-Jacob/NextLabs-Backend.git)<br>
-3. [Project](https://github.com/Rose-Grace-Jacob/NextLabs-Backend.git)
+3. [Project](https://next-labs-frontend-chi.vercel.app/)
 
 
 ## Problem Set 3 - Questions :
 ### 1. Write and share a small note about your choice of system to schedule periodic tasks (such as downloading a list of ISINs every 24 hours). Why did you choose it? Is it reliable enough; Or will it scale? If not, what are the problems with it? And, what else would you recommend to fix this problem at scale in production?
+
+Cron : It is built into most Unix-like operating systems. Cron is reliable and easy to use, allowing users to schedule tasks with a high degree of precision. It can be scaled by running multiple cron jobs in parallel or by using a distributed cron system.
+
+Celery : It is a distributed task queue that allows tasks to be executed asynchronously across multiple worker nodes. Celery is reliable and can scale horizontally by adding more worker nodes as needed. It also has advanced features such as task prioritization, retrying failed tasks, and task result storage.
+
+The choice ultimately depends on the specific needs of the project. For simple periodic tasks like downloading a list of ISINs, cron may be sufficient. For more complex tasks that require distributed processing, Celery may be a better option.
+
+In summary, the choice of scheduling system depends on the specific requirements of the project. Cron and Celery are both reliable and scalable options, but for large-scale distributed processing, a more advanced system like Apache Mesos or Kubernetes may be necessary.
+
 
 
 ### 2. In what circumstances would you use Flask instead of Django and vice versa?
